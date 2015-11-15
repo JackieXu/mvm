@@ -6,11 +6,35 @@
         <meta name="description" content="Professional brand designer and webdesigner, that understands that behind every great design is an important business objective. info@mathijsvanmiert.nl" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
         
-        <meta property="og:url" content="http://mvm.jackiexu.com" />
+        <!-- Facebook -->
+        <meta property="og:url" content="http://www.mathijsvanmiert.nl" />
         <meta property="og:type" content="profile" />
         <meta property="og:title" content="Mathijs van Miert - Brand Designer and Webdesigner" />
         <meta property="og:description" content="Professional brand designer and webdesigner, that understands that behind every great design is an important business objective. info@mathijsvanmiert.nl" />
-        <meta property="og:image" content="http://mvm.jackiexu.com/img/fb.jpg" />
+        <meta property="og:image" content="http://www.mathijsvanmiert.nl/img/fb.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="theme-color" content="#ffffff">
         
         <title>Mathijs van Miert</title>
         
@@ -87,11 +111,11 @@
                 bottom: 20px;
                 display: flex;
                 position: absolute;
+                width: 100%;
             }
             nav > a {
-                display: flex;
+                flex: auto;
                 height: 32px;
-                margin: 0 20%;
                 position: relative;
                 text-decoration: none;
                 width: 36px;
@@ -114,7 +138,7 @@
                 z-index: 0;
             }
             
-            img:hover + img, img + img:hover {
+            nav > a:hover > img + img {
                 z-index: 2;
             }
 
@@ -144,9 +168,25 @@
                 nav {
                     bottom: inherit;
                     position: inherit;
+                    width: inherit;
                 }
                 nav > a {
+                    flex: inherit;
                     margin: 0 16px;
+                }
+                p > br {
+                    display: none;
+                }
+            }
+            
+            @media (orientation: portrait) and (max-height: 600px) {
+                h1 {
+                    font-size: 25pt;
+                    margin-bottom: 0.5em;
+                }
+                p {
+                    font-size: 15pt;
+                    margin: 1em 0;
                 }
             }
         </style>
@@ -157,7 +197,7 @@
         </aside>
         <main>
             <h1><span>Hello</span>. My name is <span>Mathijs van Miert</span>.<br />My world is <span>brand design</span> and <span>webdesign</span>.</h1>
-            <p>Design is all about pushing the boundaries and technology and creativity to better solve problems. At its core, design is about people.</p>
+            <p>Design is all about pushing the boundaries and technology and creativity to better solve problems. <br />At its core, design is about people.</p>
             <nav>
                 <a href="mailto:info@mathijsvanmiert.nl">
                     <img src="img/mail.png" alt="Mail icon" width="35" height="26" />
@@ -181,5 +221,10 @@
                 </a>
             </nav>
         </main>
+        <script>
+            (function () {
+                window.scrollTo(0, 1);
+            }())
+        </script>
     </body>
 </html>
